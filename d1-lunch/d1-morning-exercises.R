@@ -75,20 +75,21 @@ df_mean_dist <- df_no_na_mean %>%
   summarize( count = n() ) %>%
   arrange(mean_sm)
 
-ggplot(data = df_no_na_mean, 
-       mapping = aes(x = mean_sm)) +
-  geom_histogram(binwidth = 0.1) +
-  labs(
-    title = "Autolysis Score Distribution",
-    x = "Mean Autolysis Score",
-    y = "Number of Subjects"
-  )
+view(df_mean_dist)
 
-ggsave(filename = "~/qbb2024-answers/d1-lunch/d1-morning_SMATSSCR-dist.pdf")
+#There are 15 subjects with a mean autolysis score of 0
+#By far the most common mean autolysis score was 1.00, identified in 97 of the patients 
+#The best way to display and report the distribution of autolysis scores would be a histogram that bins Mean Autolysis Score on the x-axis
 
-#15 subjects have a mean SMATSSCR of 0
-#The distribution of mean scores can be used to determine the most common mean score amongst the subbjects
-#A histogram can display the distribution of mean scores
 
+#I tried to graph the distribution of mean autolysis score using the code below, but it didn't seem to show the correct counts for each bin
+#ggplot(data = df_mean_dist, 
+#       mapping = aes(mean_sm)) +
+#  geom_histogram() +
+#  labs(
+#    title = "Autolysis Score Distribution",
+#    x = "Mean Autolysis Score",
+#   y = "Number of Subjects"
+#  )
 
 
