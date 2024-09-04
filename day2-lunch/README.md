@@ -44,3 +44,7 @@
 - A better method to search for pseudogenes would be to grep for the phrase "processed_pseudogene". This would provide a list of genes where the gene_type is described as either processed_pseudogene OR unprocessed_pseudogene (since the "processed_pseudogene" search term is not restricted to search for the whole word/phrase)
 
 
+## Exercise 2-3
+
+- `cut -f 1,4-5,14 genes-tabs.gtf > genes-tabs.bed`
+
