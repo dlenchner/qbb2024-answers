@@ -37,3 +37,10 @@
 
 - When comparing distribution between IG Genes and IG Pseudogenes, there is tremendous overlap. Most of the IG Genes are on chromosomes 2, 14, and 15, and most of the IG Pseudogenes are on chromosomes 2 and 14
 
+
+## Exercise 2-2
+
+- Using `grep pseudogene genes.gtf` doesn't work to identify all pseudogenes because this technique does not specify to search for "pseudogene" within the "gene_type" descriptor. Instead, it searches for the character string p-s-e-u-d-o-g-e-n-e anywhere in the file. This is demonstrated with the transcripts the are tagged as overlapping a pseudogene (they are not psuedogenes, but they overlap psuedogenes)
+- A better method to search for pseudogenes would be to grep for the phrase "processed_pseudogene". This would provide a list of genes where the gene_type is described as either processed_pseudogene OR unprocessed_pseudogene (since the "processed_pseudogene" search term is not restricted to search for the whole word/phrase)
+
+
