@@ -27,6 +27,7 @@ ggplot(data = df_log2, mapping = aes(x = Tissue_Gene, y = log2_expression)) +
     y = "Gene Expression (log2)"
   )
 
+ggsave(filename = "~/qbb2024-answers/d4-morning/d4-morning-plot.png")
 
 # Given the high expression and high tissue specificity observed for these 
     # genes, I would have expected these genes of interest to be essential 
