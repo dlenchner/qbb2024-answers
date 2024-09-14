@@ -43,6 +43,14 @@ Step 1.5
         In this instance, the normal distribution matches the Poisson distribution a bit more closely than was observed previously. However, both distributions stray from the data more than in the 3x coverage example.
 
 
+Step 1.6
+
+    Number of reads: 300,000 reads are needed to achieve 30x coverage of a 1 Mbp genome with 100 bp reads
+
+    1.  Using the grep function in Unix on the genome_coverage_30x.txt file I made, I found that only 4 bp were not covered by any reads.
+    2.  This matches the expectation based on the Poisson distribution, but only because the Poisson distribution loses so much confidence as it tends toward x = 0.
+        In this case, the normal and Poisson distributions are almost perfectly aligned and both match the data relatively well (though not as tightly as was seen in the previous exercises).
+
 
 
 

@@ -1,8 +1,8 @@
 library(tidyverse)
 
 
-# read in the genome_coverage_10x file (Exercise 1.5)
-genome_coverage <- read.delim("~/qbb2024-answers/week1/genome_coverage_10x.txt")
+# read in the genome_coverage_30x file (Exercise 1.6)
+genome_coverage <- read.delim("~/qbb2024-answers/week1/genome_coverage_30x.txt")
 
 # save the genome size (1 Mbp) as a variable
 genome_size = 1000000
@@ -10,11 +10,11 @@ genome_size = 1000000
 # determine the maximum coverage of all the positions in the genome (the poisiton in the genome with the most overlapping reads)
 max_coverage <- max(genome_coverage)
 
-# calculate the poisson distribution of coverage values ranging from 0 to the maximum coverage value. Change lambda to 10 to account for the 10x coverage
-poisson_estimates <- genome_size * dpois(0:max_coverage, 10)
+# calculate the poisson distribution of coverage values ranging from 0 to the maximum coverage value. Change lambda to 30 to account for the 10x coverage
+poisson_estimates <- genome_size * dpois(0:max_coverage, 30)
 
-# calculate the normal distribution of coverage values ranging from 0 to the maximum coverage value. Change the mean to 10 and the standard deviation to 3.16 (the sqrt of 10)
-normal_estimates <- genome_size * dnorm(0:max_coverage, 10, 3.16)
+# calculate the normal distribution of coverage values ranging from 0 to the maximum coverage value. Change the mean to 30 and the standard deviation to 5.47 (the sqrt of 30)
+normal_estimates <- genome_size * dnorm(0:max_coverage, 30, 5.47)
 
 
 # plot the histogram and the two distributions using ggplot
@@ -27,13 +27,13 @@ ggplot() +
   scale_color_manual(name = "Legend", values = c("Genomic Positions per Read Number" = "black", "Poisson Distribution" = "red", "Normal Distribution" = "blue")) + 
   labs(
     title = "Distribution of Coverage Across the Genome",
-    subtitle = "Simulated 10x Coverage",
+    subtitle = "Simulated 30x Coverage",
     x = "Number of Reads",
     y = "Number of Positions in the Genome"
   )
 
 # save the plot as a png
-ggsave(filename = "~/qbb2024-answers/week1/ex1_10x_cov.png")
+ggsave(filename = "~/qbb2024-answers/week1/ex1_30x_cov.png")
 
 
 
