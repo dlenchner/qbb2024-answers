@@ -28,9 +28,9 @@ Step 1.3
 
 Step 1.4
 
-1.  Using the grep function in Unix on the genome_coverage.txt file I made, I found that 50,335 bp were not covered by any reads (roughly 5% of the genome)
-2.  The number of genes lacking coverage (~50,000) matches the expectation based on the Poisson distribution plotted with the histogram.
-    For the most part, the normal distribution fits the data really well (the curve for the normal distribution overlaps the histogram bars almost perfectly). However, the normal distribution overestimates the number of samples with zero coverage to be ~70,000.
+    1.  Using the grep function in Unix on the genome_coverage_3x.txt file I made, I found that 49,450 bp were not covered by any reads (roughly 5% of the genome)
+    2.  The number of genes lacking coverage (~50,000) matches the expectation based on the Poisson distribution plotted with the histogram.
+        For the most part, the normal distribution fits the data really well (the curve for the normal distribution overlaps the histogram bars almost perfectly). However, the normal distribution overestimates the number of samples with zero coverage to be ~70,000.
 
 
 
