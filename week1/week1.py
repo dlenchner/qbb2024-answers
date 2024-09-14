@@ -9,7 +9,7 @@ import numpy
 # assign variables to each of the factors needed to calculate the number of reads (genomoe size, the size of each read, and the coverage we're looking for)
 genome_size = 1000000       # 1 Mbp = 1,000,000 bp
 read_size = 100             # 100 bp per read
-coverage = 3                # 3x coverage of the genome
+coverage = 3               # 3x coverage of the genome
 
 # perform the calculation for the number of reads needed to cover a 1 Mbp
 read_number = (genome_size * coverage) / read_size
