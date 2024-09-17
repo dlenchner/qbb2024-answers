@@ -43,6 +43,7 @@ Step 1.5
         In this instance, the normal distribution matches the Poisson distribution a bit more closely than was observed previously. However, both distributions stray from the data more than in the 3x coverage example.
 
 
+
 Step 1.6
 
     Number of reads: 300,000 reads are needed to achieve 30x coverage of a 1 Mbp genome with 100 bp reads
@@ -54,8 +55,29 @@ Step 1.6
 
 
 
+Step 2.4
+
+The following shows the command line argument I used to generate the directed de Bruijn graph:
+
+    dot week1_deBruijn_edges.dot | dot -Tpng -Gbgcolor=lightgoldenrodyellow -Gfontsize=24 -Glabel="de Bruijn graph of genomic reads" -Epenwidth=0.5 -Earrowsize=0.5 > ex2_digraph.png
+
+
+NOTE: I played around with some of the different attributes I could assign to the graph
 
 
 
+Step 2.5
+
+One potential genome sequence that could produce the reads provided for exercise 2:
+
+    5' -  GATTGATTCATTGATTCTTATTT - 3'
 
 
+
+Step 2.6
+
+To accurately reconstruct the sequence of the genome, a larger set of longer reads would be needed. A larger number of reads would help to assess each region of the genome from multiple different sequencing start sites, which would generate overlapping sequences that could be pieced together. Additionally, longer reads would improve confidence in assigning and piecing together these overlaps. In the example used for exercise 2, the 5-mer reads created a lot of ambiguity in the interpretation of the sample genome. For example, it is unclear whether the "TCATT" and "ATTGA" reads overlap at the "ATT" or if they simply represent two separate instances of the "ATT" 3-mer in the genome. A larger set of longer reads would help to alleviate this uncertainty.
+
+As a thought experiment to address this point:
+
+If we assume my genome above (step 2.5) is the correct genome, a longer sequencing read of "ATTCATTGATTC" would give us confidence that the "TCATT" and "ATTGA" reads from the exercise actually overlap in the genome.
