@@ -25,18 +25,20 @@ for read in reads:
 # print(graph)              # test the above code
 
 
-# generate a header for the resulting file
-header = "de_Bruijn_edges"
+# generate a header for the resulting file                # edited to make the file compatible with graphviz
+header = "digraph {"
 print(header)
 
 
 # step through each edge in the graph list
 for edge in graph:
-    print(edge)                                             # print the edge beneath the header generated above
+    print(edge)                                             # print the edge
 
 
+footer = "}"
+print(footer)
 
-# Using Unix code, run this program and save the results as a txt file, "week1_deBruijn_edges.txt"
+# Using Unix code, run this program and save the results as a dot file, "week1_deBruijn_edges.dot"
 
 
 
