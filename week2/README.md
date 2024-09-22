@@ -21,7 +21,7 @@ Exercise 1.6
 
     The following command line demonstrates the arguments I entered to subtract the regions from each of the feature files from the genome file to obtain a feature file that highlights regions in chromosome 1 that are not listed as exons, introns, or regulatory regions
 
-        bedtools subtract -a genome_chr1.bed -b exons_chr1.bed -c introns_chr1.bed -d cCREs_chr1.bed > other_chr1.bed
+        bedtools subtract -a genome_chr1.bed -b exons_chr1.bed -b introns_chr1.bed -b cCREs_chr1.bed > other_chr1.bed
 
 
 
