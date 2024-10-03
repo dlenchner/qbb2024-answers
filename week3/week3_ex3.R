@@ -1,5 +1,5 @@
 library(tidyverse)
-library(ggthemes)
+
 
 # read in the AF.txt file and save as a new dataframe
 df <- read_tsv("~/qbb2024-answers/week3/AF.txt")
@@ -60,9 +60,9 @@ ggsave(filename = "~/qbb2024-answers/week3/week3_read_depth_distribution.png")
 # calculated with the reads/coverage in the A01_09 sample (see 
 # Question 1.3). The shape of the distribution also makes sense when
 # you consider that the number of samples (ten) and the number of 
-# reads per sample (close to 700,000 for sample A01_09) would make 
-# lower coverages across the genome (like 0x) less likely, but 
-# would also make higher coverages (like 15x) possible in some regions.
+# reads per sample (close to 700,000 for sample A01_09) are small 
+# enough to make lower coverages across the genome (like 1-7x) more likely, 
+# while making higher coverages (like 15x) possible but not likely.
 
 
 
