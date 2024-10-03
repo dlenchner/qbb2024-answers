@@ -7,7 +7,7 @@ df <- read_tsv("~/qbb2024-answers/week3/AF.txt")
 # create a histogram demonstrating the distribution of alternate allele frequencies in the yeast samples that were sequenced
 ggplot(data = df, 
        mapping = aes(x = allele_frequency)) +
-  geom_histogram(bins=11, color = "black", fill = "lightgray") + 
+  geom_histogram(bins = 11, color = "black", fill = "lightgray") + 
   labs(
     title = "Distribution of SNP frequencies in a set of sample yeast sequences", 
     subtitle = "Each sample sequence was aligned to the sacCer3 reference genome",
@@ -35,6 +35,34 @@ ggsave(filename = "~/qbb2024-answers/week3/week3_allele_frequency_spectrum.png")
 # frequency of an alternate allele or SNP at the given position.
 
 
+# read in the DP.txt file and save as a new dataframe
+df <- read_tsv("~/qbb2024-answers/week3/DP.txt")
+
+# create a histogram demonstrating the distribution of read depths
+ggplot(data = df, 
+       mapping = aes(x = read_depth)) +
+  geom_histogram(bins = 21, color = "black", fill = "lightgray") +
+  xlim(0, 20) +
+  labs(
+    title = "Distribution of coverage across the yeast reference genome",
+    x = "Coverage",
+    y = "Count\n(Number of genomic positions with given coverage)"
+  )
+
+ggsave(filename = "~/qbb2024-answers/week3/week3_read_depth_distribution.png")
+
+
+### Question 3.2 ###
+
+# Coverage distribution appears to follow a Poisson distribution,
+# centered around a coverage of 4x. The modal peak of this histogram 
+# at 4x is as expected given the 4x estimated average coverage I 
+# calculated with the reads/coverage in the A01_09 sample (see 
+# Question 1.3). The shape of the distribution also makes sense when
+# you consider that the number of samples (ten) and the number of 
+# reads per sample (close to 700,000 for sample A01_09) would make 
+# lower coverages across the genome (like 0x) less likely, but 
+# would also make higher coverages (like 15x) possible in some regions.
 
 
 
