@@ -33,7 +33,7 @@
 - The PCA plot suggests that the labels for two of the replicates were swapped (Replicate 1 of Fe tissue and Replicate 3 of LFC-Fe tissue). For an explanation of my answer, see above.
 
 
-## Exercise 3.6 Questions ##
+## Exercise 3.6 Question ##
 
 - The results from the GO analysis are't what I initially expected. I expected high expression of genes related to digestion (and there are a few catabolic enzymes expressed), but most of the highly expressed genes are involved in the nervous system. Another large chunk of the highly expressing genes are involved in morphogenesis and development. While these results aren't what I initially expected, they do make sense. The digestive system is heavily intertwined with the nervous system, explaining the neuron-related gene expression. Additionally, this paper was particualrly interested in midgut stem cells in flies, which accounts for the morphogenesis/development-related gene expression.
 
